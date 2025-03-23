@@ -1,0 +1,14 @@
+name: Test Project
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4.2.2
+      - name: Install depenedencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
